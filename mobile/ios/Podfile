@@ -27,6 +27,10 @@ target 'Underlie' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'ReactNativeNavigation', :podspec => '../node_modules/react-native-navigation/ReactNativeNavigation.podspec'
+  pod 'RNCAsyncStorage', :podspec => '../node_modules/@react-native-community/async-storage/RNCAsyncStorage.podspec'
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'UnderlieTests' do
     inherit! :search_paths
     # Pods for testing

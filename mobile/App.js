@@ -14,6 +14,7 @@ import {
   View,
   Text,
   StatusBar,
+  TextInput
 } from 'react-native';
 
 import {
@@ -27,46 +28,34 @@ import {
 const App = () => {
   return (
     <Fragment>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
+      <StatusBar barStyle="light-content" backgroundColor="#0033AA" />
+      <SafeAreaView style={{
+        justifyContent: "center",
+        alignItems:  "center",
+        flex:1,
+        backgroundColor: "#0033AA"
+      }}>
+        <Text style={{
+            fontSize: 56,
+            color: "white"
+          }}>
+          UNDERLIE
+        </Text>
+        <View>
+          <TextInput 
+            style={{
+              backgroundColor: "white",
+              paddingLeft: 48,
+              paddingRight: 48,
+              borderBottomLeftRadius: 100,
+              borderTopLeftRadius: 100,
+              fontSize: 16
+            }}
+            placeholder={"Type here to find the truth..."}
+            placeholderTextColor={"#959595"}/>
+          <View>
+          </View>  
+        </View>
       </SafeAreaView>
     </Fragment>
   );
