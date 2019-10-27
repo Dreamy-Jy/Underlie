@@ -25,6 +25,9 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import Icon from "react-native-vector-icons/FontAwesome5";
+
+
 const App = () => {
   return (
     <Fragment>
@@ -54,6 +57,9 @@ const App = () => {
             placeholder={"Type here to find the truth..."}
             placeholderTextColor={"#959595"}/>
           <View>
+            <Icon name="question" size={22} color="#FFFFFF" />
+            <Icon name="search" size={22} color="#FFFFFF" />
+            <Icon name="spider" size={22} color="#FFFFFF" />
           </View>  
         </View>
       </SafeAreaView>
