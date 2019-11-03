@@ -58,3 +58,5 @@ buck-out/
 # CocoaPods
 mobile/ios/Pods/
 mans face.jpg
+
+.vscode/
