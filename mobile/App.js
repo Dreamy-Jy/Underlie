@@ -4,7 +4,7 @@
  *
  * @format
  * @flow
- */
+ *
 
 import React, {Fragment} from 'react';
 import {
@@ -107,3 +107,6 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+*/
+
+export default from './storybook';
