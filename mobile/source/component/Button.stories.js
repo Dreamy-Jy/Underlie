@@ -1,7 +1,7 @@
 import React from 'react';
+import { SafeAreaView } from "react-native";
 import { storiesOf } from "@storybook/react-native";
-import { action } from "@storybook/addon-actions";
 import Button from "./Button";
 
-storiesOf("Button", module)
-    .add("default", () => <Button text="Hello World" />);
+storiesOf("Buttons", module)
+    .add("Regular", () => <SafeAreaView style={[{backgroundColor: "#004EFF", flex: 1}]}><Button text="Hello World" action={()=>{}}/></SafeAreaView>);

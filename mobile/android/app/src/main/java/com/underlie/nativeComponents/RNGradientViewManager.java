@@ -1,12 +1,14 @@
 package com.underlie.nativeComponents;
 
+import android.view.ViewManager;
+
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
 
 import javax.annotation.Nullable;
 
-public class RNGradientManager extends SimpleViewManager<RNGradientView> {
+public class RNGradientViewManager extends SimpleViewManager<RNGradientView> {
     @Override
     public String getName() {
         return "RNGradientView";

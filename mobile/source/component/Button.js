@@ -1,27 +1,56 @@
 import React,{ Component } from "react";
 import { TouchableWithoutFeedback, View, Text, StyleSheet, Animated, Platform } from "react-native";
+import { B } from "index";
 
 
 export default class Button extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            BGColorController: new Animated.Value(0)
+        };
+
+        this.pressIn = this.pressIn.bind(this);
+        this.pressOut = this.pressOut.bind(this);
     }
 
-    pressIn() {}
+    pressIn() {
+        Animated.timing(this.state.BGColorController, {
+            toValue: 1,
+            duration: 62.5
+        }).start();
+    }
 
-    pressOut() {}
+    pressOut() {
+        Animated.timing(this.state.BGColorController, {
+            toValue: 0,
+            duration: 500
+        }).start();
+
+        // this.props.action();
+    }
 
     render() {
+        const BGColorSpectrum =  this.state.BGColorController.interpolate({
+            inputRange: [0, 1],
+            outputRange: [startColor, endColor]
+        });
 
         return(
-            <TouchableWithoutFeedback>
-                <View style={[styles.container]}>
+            <TouchableWithoutFeedback 
+                onPressIn={this.pressIn}
+                onPressOut={this.pressOut}>
+                <Animated.View style={[styles.container, {backgroundColor: BGColorSpectrum}, this.props.style]}>
                     <Text style={[styles.text, this.props.textColor]}>{this.props.text}</Text>
-                </View>
+                </Animated.View>
             </TouchableWithoutFeedback>
         );
     }
 }
+
+const startColor = "#6298FF";
+const endColor = "#004EFF";
 
 const styles = StyleSheet.create({
     container: {

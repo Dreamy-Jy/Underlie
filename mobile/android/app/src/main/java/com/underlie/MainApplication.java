@@ -17,6 +17,7 @@ import com.reactnativenavigation.react.ReactGateway;
 
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
+import com.underlie.nativeComponents.RNGradientViewPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -42,7 +43,8 @@ public class MainApplication extends NavigationApplication {
   protected List<ReactPackage> getPackages() {
     return Arrays.<ReactPackage>asList(
             new VectorIconsPackage(),
-            new AsyncStoragePackage()
+            new AsyncStoragePackage(),
+            new RNGradientViewPackage()
     );
   }
 
